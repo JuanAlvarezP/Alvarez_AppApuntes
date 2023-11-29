@@ -3,21 +3,21 @@
     x:Class="Alvarez_AppApuntes.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Alvarez_AppApuntes"
+    xmlns:views="clr-namespace:Alvarez_AppApuntes.Views"
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
         <ShellContent
-            Title="Menu Principal"
-            ContentTemplate="{DataTemplate local:MainPage}"
-            Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes.png'}"
-            Route="MainPage" />
+            Title="Notas"
+            ContentTemplate="{DataTemplate views:AllNotesPage}"
+            Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
+           
 
         <ShellContent
             Title="Acerca de"
-            ContentTemplate="{DataTemplate local:AboutPage}"
-            Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png'}"
-            Route="MainPage" /> 
+            ContentTemplate="{DataTemplate views:AboutPage}"
+            Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
+             
     </TabBar>
 
         
