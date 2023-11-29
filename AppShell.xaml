@@ -6,9 +6,20 @@
     xmlns:local="clr-namespace:Alvarez_AppApuntes"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+            Title="Menu Principal"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes.png'}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="Acerca de"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+            Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png'}"
+            Route="MainPage" /> 
+    </TabBar>
+
+        
 
 </Shell>
